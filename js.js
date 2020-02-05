@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // TIMER
 
-    let deadLine = '2021-03-01';
+    let deadLine = '2020-02-06';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function() {
         };
     }
     function setClock(id, endtime) {
-        let timer = document.getElementById('id'),
+        let timer = document.getElementById(id),
             hours = timer.querySelector('.hours'),
             minutes = timer.querySelector('.minutes'),
             seconds = timer.querySelector('.seconds'),
