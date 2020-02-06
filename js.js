@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // TIMER
 
-    let deadLine = '2020-02-06';
+    let deadLine = '2020-02-07';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -82,4 +82,28 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     setClock('timer', deadLine);
+
+//modal
+
+let more = document.querySelector('.more'),
+    detailsBtn = document.querySelector('.description-btn'),
+    overlay = document.querySelector('.overlay'),
+    close = document.querySelector('.popup-close');
+
+    more.addEventListener('click', function() {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function() {
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        document.body.style.overflow = '';
+    });
+    detailsBtn.addEventListener('click', function() {
+        overlay.style.display = 'block';
+        this.classList.add('detailsBtn-splash');
+        document.body.style.overflow = 'hidden';
+    })
 });
